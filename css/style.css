@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(236, 69, 236, 0.4),
+    rgba(253, 253, 22, 0.4)
+  );
+}
+
+img {
+  display: block;
+  width: 80px;
+}
+
+h2 {
+  font-size: 5.5em;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+
+h4 {
+  font-size: 2.1em;
+  text-align: center;
+}
+
+/* Utility Classes */
+.btn {
+  display: block;
+  width: 90px;
+  padding: 11px 0px;
+  font-size: 1.1em;
+  background: transparent;
+  color: #444;
+  border: 1px solid #444;
+  border-radius: 20px;
+  margin: 3px 0;
+  color: #444;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Classes */
+.container {
+  width: 70%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.384);
+  position: relative;
+}
+
+.player0,
+.player1 {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.player0 {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 25px 0 0 25px;
+}
+
+.player1 {
+  background: rgba(128, 0, 128, 0.359);
+  border-radius: 0 25px 25px 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.current {
+  width: 180px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fff, rgba(0, 0, 255, 0.2));
+  box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.384);
+  border-radius: 15px;
+}
+
+.joystick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  background: rgb(238, 237, 237);
+  width: 200px;
+  height: 400px;
+  box-shadow: 10px 10px 30px rgba(128, 128, 128, 0.279),
+    -10px -10px 30px rgba(128, 128, 128, 0.279);
+  border-radius: 20px;
+}
+
+.dice {
+  /* display: none; */
+}
+
+.help,
+.lang {
+  border: none;
+  font-size: 1.1rem;
+}
+
+.help:hover,
+.lang:hover {
+  background: transparent;
+  color: red;
+}
+
+.option .btn {
+  display: inline;
+}
