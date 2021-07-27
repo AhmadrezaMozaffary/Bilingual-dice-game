@@ -145,6 +145,7 @@ h4 {
 /* Mobile Version */
 @media screen and (max-width: 425px) {
   .container {
+    width: 90%;
     flex-direction: column;
     box-shadow: none;
   }
@@ -153,10 +154,11 @@ h4 {
     width: 60%;
     border-radius: 0;
     transform: rotate(90deg);
+    margin: 0;
   }
   .joystick {
     width: max-content;
-    height: 60%;
+    height: 55%;
     transform: rotate(90deg);
     display: flex;
     justify-content: center;
