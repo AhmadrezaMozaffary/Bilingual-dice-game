@@ -141,3 +141,60 @@ h4 {
 .option .btn {
   display: inline;
 }
+
+/* Mobile Version */
+@media screen and (max-width: 425px) {
+  .container {
+    flex-direction: column;
+    box-shadow: none;
+  }
+  .player0,
+  .player1 {
+    width: 60%;
+    border-radius: 0;
+  }
+  .player0 {
+    transform: rotate(90deg);
+  }
+  .player1 {
+    transform: rotate(270deg);
+  }
+  .joystick {
+    width: max-content;
+    height: 60%;
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+  }
+  .dice {
+    margin-bottom: 5px;
+  }
+  .about h2 {
+    font-size: 4em;
+  }
+  .option {
+    display: flex;
+    flex-direction: column;
+  }
+  .current {
+    display: flex;
+    box-shadow: none;
+    width: 6rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10;
+  }
+  .current h3 {
+    margin: 0;
+  }
+  .current h4 {
+    font-size: 1.8em;
+    padding: 10px 0;
+  }
+  .btn {
+    padding: 0;
+    margin: 5px 10px;
+  }
+}
