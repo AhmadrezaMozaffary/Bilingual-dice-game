@@ -152,12 +152,7 @@ h4 {
   .player1 {
     width: 60%;
     border-radius: 0;
-  }
-  .player0 {
     transform: rotate(90deg);
-  }
-  .player1 {
-    transform: rotate(270deg);
   }
   .joystick {
     width: max-content;
@@ -196,5 +191,51 @@ h4 {
   .btn {
     padding: 0;
     margin: 5px 10px;
+  }
+}
+
+/* Tablet Version */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .joystick {
+    width: max-content;
+    height: max-content;
+    background: rgba(228, 222, 222, 0.9);
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px;
+    bottom: 0;
+  }
+  .dice {
+    width: 70px;
+    margin: 5px 0;
+    padding: 10px;
+  }
+  .about {
+    margin-bottom: 0.3em;
+  }
+  .about h2 {
+    font-size: 4.5em;
+  }
+  .about h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+  }
+  .current {
+    width: 40%;
+    height: 7em;
+    margin-top: 2.5em;
+  }
+  .btn {
+    width: max-content;
+    height: max-content;
+    padding: 5px 10px;
+    margin-right: 3px;
+  }
+  .player0,
+  .player1 {
+    display: flex;
+    justify-content: center;
   }
 }
