@@ -11,47 +11,72 @@
     <!-- Game Showcase -->
     <section class="container">
       <!-- Player 1 -->
-      <section class="player0">
+      <section class="player0 active-player">
         <div class="about">
-          <h3>Player 1</h3>
-          <h2>12</h2>
+          <h3 class="player-title0">Player 1</h3>
+          <h2 class="total0">0</h2>
         </div>
 
         <div class="current">
-          <h3>Current</h3>
-          <h4>11</h4>
+          <h3 class="current-title0">Current</h3>
+          <h4 class="current-score0">0</h4>
         </div>
       </section>
 
       <!-- Player 2 -->
-      <section class="player1">
+      <section class="player1 deactive-player">
         <div class="about">
-          <h3>Player 2</h3>
-          <h2>3</h2>
+          <h3 class="player-title1">Player 2</h3>
+          <h2 class="total1">0</h2>
         </div>
 
         <div class="current">
-          <h3>Current</h3>
-          <h4>8</h4>
+          <h3 class="current-title1">Current</h3>
+          <h4 class="current-score1">0</h4>
         </div>
       </section>
 
       <!-- Game Joystick -->
       <section class="joystick">
-        <img src="./images/dice6.png" alt="dice" class="dice" />
+        <img src="./images/dice6.png" alt="dice" class="dice hidden" />
 
         <button class="btn roll">Roll 🖲</button>
         <button class="btn hold">Hold 📥</button>
         <button class="btn reset">Reset ♻️</button>
 
         <section class="option">
-          <button class="btn lang">Fa / En</button>
+          <button class="btn lang" id="lang">Fa / En</button>
 
           <button class="btn help">Help</button>
         </section>
       </section>
     </section>
-
+    <p class="langmsg"></p>
+    <div class="modal-window">
+      <div class="modal-message">
+        <div class="x-button">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+        <p class="modal-content-en" dir="ltr">
+          1) If your Dice number is equal to "1" before "Hold" it, You will lose
+          all of your "Current" scores and the game will automatically change
+          the player, so before that, use Hold button! <br />
+          <br />
+          2) If your total score greater than or equal to "100", We want to say
+          to you "Congratulations", You just won the game !
+        </p>
+        <p class="modal-content-fa" dir="rtl">
+          ۱) اگر عدد تاس شما برابر عدد یک شود قبل از اینکه روی دکمه نگهداری
+          بزنید کل امتیاز فعلی شما صفر شده و بازی به صورت خودکار نوبت را به نفر
+          بعد میدهد پس قبل از آن روی دکمه نگهداری بزنید !
+          <br />
+          <br />
+          ۲)اگر امتیاز کلی شما بیشتر یا مساوی عدد صد شد ما باید به شما تبریک
+          بگویییم شما بازی را برده اید !
+        </p>
+      </div>
+    </div>
     <script src="./js/app.js"></script>
   </body>
 </html>
