@@ -13,6 +13,7 @@ const totalScore1El = document.querySelector(".total1");
 const langMessage = document.querySelector(".langmsg");
 
 let winMessage = "You win!";
+let isInEnglishLanguage;
 const langFA = " 🇮🇷 زبان به فارسی تغییر کرد ";
 const langEN = "Language changed to EN 🇺🇸";
 
@@ -109,8 +110,8 @@ btnReset.addEventListener("click", () => {
   currentScore1.textContent = 0;
   totalScore0El.textContent = 0;
   totalScore1El.textContent = 0;
-  player0Title.textContent = "Player 1";
-  player1Title.textContent = "Player 2";
+  player0Title.textContent = isInEnglishLanguage ? "بازیکن ۱" : "Player 1";
+  player1Title.textContent = isInEnglishLanguage ? "بازیکن ۲" : "Player 2";
   player0El.classList.add("active-player");
   player0El.classList.remove("deactive-player");
   player1El.classList.add("deactive-player");
@@ -119,7 +120,7 @@ btnReset.addEventListener("click", () => {
 });
 
 btnLanguage.addEventListener("click", () => {
-  const isInEnglishLanguage = winMessage === "You win!";
+  isInEnglishLanguage = winMessage === "You win!";
   winMessage = winMessage === "You win!" ? "شما برنده شدید" : "You win!";
   const msg = isInEnglishLanguage ? langFA : langEN;
   langMessage.textContent = msg;
