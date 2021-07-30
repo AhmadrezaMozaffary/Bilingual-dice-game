@@ -119,19 +119,21 @@ btnReset.addEventListener("click", () => {
 });
 
 btnLanguage.addEventListener("click", () => {
+  const isInEnglishLanguage = winMessage === "You win!";
   winMessage = winMessage === "You win!" ? "شما برنده شدید" : "You win!";
-  const isTrue = winMessage === "You win!";
-  const msg = isTrue ? langFA : langEN;
+  const msg = isInEnglishLanguage ? langFA : langEN;
   langMessage.textContent = msg;
-  player0Title.textContent = isTrue ? "بازیکن ۱" : "Player 1";
-  player1Title.textContent = isTrue ? "بازیکن ۲" : "Player 2";
-  currentTitle0.textContent = isTrue ? "امتیاز فعلی" : "Current";
-  currentTitle1.textContent = isTrue ? "امتیاز فعلی" : "Current";
-  btnRoll.textContent = isTrue ? "بریز 🖲" : "Roll 🖲";
-  btnHold.textContent = isTrue ? "نگهداری 📥" : "Hold 📥";
-  btnReset.textContent = isTrue ? "از اول ♻️" : "Reset ♻️";
-  btnLanguage.textContent = isTrue ? "فا / EN" : "Fa / En";
-  btnHelp.textContent = isTrue ? "راهنما" : "Help";
+  player0Title.textContent = isInEnglishLanguage ? "بازیکن ۱" : "Player 1";
+  player1Title.textContent = isInEnglishLanguage ? "بازیکن ۲" : "Player 2";
+  currentTitle0.textContent = isInEnglishLanguage ? "امتیاز فعلی" : "Current";
+  currentTitle1.textContent = isInEnglishLanguage ? "امتیاز فعلی" : "Current";
+  btnRoll.textContent = isInEnglishLanguage ? "بریز 🖲" : "Roll 🖲";
+  btnHold.textContent = isInEnglishLanguage ? "نگهداری 📥" : "Hold 📥";
+  btnReset.textContent = isInEnglishLanguage ? "از اول ♻️" : "Reset ♻️";
+  btnLanguage.textContent = isInEnglishLanguage ? "English" : "فارسی";
+  btnHelp.textContent = isInEnglishLanguage ? "راهنما" : "Help";
+
+  fadeOut(langMessage);
 });
 
 btnHelp.addEventListener("click", () => {
