@@ -8,16 +8,16 @@ const fadeOut = function(element, startFadingOutAfter = 2000, speed = 1) {
     // speed must be greater than zero
     speed = speed <= 0 ? 1 : speed;
     
-    let elOpacity = element.style.opacity; 
     setTimeout(function() { 
         const timerId = setInterval(function() { 
+          let elOpacity = element.style.opacity; 
           if (elOpacity == 0) { 
             clearInterval(timerId);
           } else {
-             elOpacity -= 0.05;
+             elOpacity = elOpacity - 0.05;
           }
         }, 100 / speed);
       }, startFadingOutAfter);
     
-      elOpacity = 1; 
+      element.style.opacity = 1; 
 }
