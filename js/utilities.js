@@ -4,13 +4,13 @@
  * @param {Number} [startFadingOutAfter = 2000] - The time that fading out will be started after
  * @param {Number} [speed = 1] - The speed of fading out, speed must be greater than zero.
  */ 
-function fadeOut(element, startFadingOutAfter = 2000, speed = 1) {
+const fadeOut = function(element, startFadingOutAfter = 2000, speed = 1) {
     // speed must be greater than zero
     speed = speed <= 0 ? 1 : speed;
 
     setTimeout(function() { 
-        var timerId = setInterval(function() { 
-          var opacity = element.style.opacity; 
+        const timerId = setInterval(function() { 
+          const opacity = element.style.opacity; 
           if (opacity == 0) { 
             clearInterval(timerId);
           } else {
